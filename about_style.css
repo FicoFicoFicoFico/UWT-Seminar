@@ -1,0 +1,109 @@
+.hero-section{
+    width: 100%;
+    margin-top: -700px;
+}
+
+.hero-image{
+    width: 100%;
+    height: 1300px;
+    background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("about/images/hero-about.webp");
+    background-position: center 600px;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-title{
+    width: fit-content;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+    margin-top: -330px;
+    margin-bottom: 330px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.articles{
+    position: relative;
+    width: 60%;
+    margin: 60px auto 0;
+}
+
+#first-article{
+    margin: 60px auto 0;
+}
+
+#first-article p{
+    margin-bottom: 50px;
+}
+
+.articles h2{
+    font-size: 35px;
+    color: #001b53;
+}
+
+.articles p{
+    font-size: 20px;
+}
+
+#first-article img{
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.wrc2, .wrc3{
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    margin-bottom: 0;
+}
+
+.wrc2 img, .wrc3 img{
+    width: 100%;
+    display: block;
+}
+
+figcaption{
+    margin-top: 5px;
+}
+
+#rally-works{
+    width: 35%;
+    margin-left: 20%;
+    margin-right: 5%;
+    display: inline-block;
+}
+
+aside{
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+    margin-top: 70px;
+    text-align: center;
+}
+
+aside h2{
+    font-size: 25px;
+}
+
+.points {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding-right: 0;
+    border-collapse: collapse;
+}
+
+.points td{
+    border-top: 2px solid gray;
+    height: 21px;
+}
+
