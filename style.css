@@ -328,7 +328,7 @@ thead .first-row{
     color: white;
 }
 
-@media (max-width: 960px){
+@media (max-width: 480px){
     .logo-image{
         margin-left: 30px;
     }
