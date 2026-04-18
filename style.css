@@ -3,7 +3,6 @@
     src: url('fonts/Urbanist-VariableFont_wght.ttf') format("truetype");
 }
 
-
 html{
     scroll-behavior: smooth;
 }
@@ -35,6 +34,7 @@ img{
     top: 0;
     left: 0;
     width: 100%;
+    max-height: 15vh;
     background: linear-gradient(to bottom, rgba(27, 27, 27, 0.9), rgba(27, 27, 27, 0));
     backdrop-filter: blur(10px);
     z-index: 1000;
@@ -78,51 +78,52 @@ img{
     padding-left: 10px;
 }
 
+.hero-section{
+    position: relative;
+}
+
 .hero-image{
-    margin-top: -200px;
     margin-bottom: 0;
     padding: 0;
-    height: 122vh;
+    min-height: 95vh;
     background-image: url('images/hero-image3.webp');
     background-position: center center;
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .hero-text{
-    margin-left: 100px;
-    width: 50%;
-    padding-left: 30px;
-    padding-right: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-64.5%, 50%);
+    width: 60%;
+    min-height: 20vh;
+    padding: 20px 30px;
     word-break: keep-all;
     background-color: rgba(0, 27, 83, 0.4);
     backdrop-filter: blur(10px);
-    margin-right: 900px;
     border-radius: 20px;
 }
 
-.hero-section h3{
-    padding-top: 20px;
-    font-size: 50px;
+.hero-section .hero-text h3{
+    font-size: 2.5em;
+    padding: 0;
+    margin: 10px 0;
     color: white;
-    margin-top: -370px;
-    margin-bottom: 40px;
 }
 
-.hero-section p{
+.hero-section .hero-text p{
     color: white;
-    padding-bottom: 25px;
-    font-size: 18px;
-}
-
-.hero-article{
-    margin: 50px auto;
-    z-index: -5;
+    font-size: 1.2em;
+    width: 100%;
+    min-height: 10vh;
+    max-height: 14vh;
+    overflow: hidden;
 }
 
 .anchor-links{
-    position: relative;
-    margin-top: 80px;
     z-index: 100;
     width: 100%;
     text-align: center;
@@ -163,14 +164,14 @@ img{
     text-align: left;
     width: 60%;
     font-family: Urbanist, Helvetica, sans-serif;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: bold;
     margin-bottom: 30px;
     margin-left: 0;
 }
 
 .short-intro-text p{
-    font-size: 18px;
+    font-size: 1.3em;
 }
 
 .short-intro-img{
@@ -190,22 +191,22 @@ img{
 .manufacturers-heading{
     color: #002468;
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 60px;
     text-align: left;
     font-family: Urbanist, Helvetica, sans-serif;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: bold;
-    margin-bottom: 60px;
 }
 
 .manufacturers-wrapper{
     width: 30%;
     display: inline-block;
     transition: transform 0.3s ease;
+    vertical-align: top;
 }
 
 .manufacturers-wrapper h3{
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .manufacturer-image{
@@ -225,20 +226,20 @@ img{
     transform: scale(1.05);
 }
 
-.calendar-article{
+.season-calendar-article{
     margin-top: 60px;
 }
 
-.calendar-article table{
+.season-calendar-article table{
     margin-top: 40px;
 }
 
-.calendar-title{
+.season-calendar-title{
     color: #001b53;
     width: 90%;
     text-align: left;
     margin: auto;
-    font-size: 40px;
+    font-size: 60px;
 }
 
 .season-calendar{
@@ -284,6 +285,30 @@ thead .first-row{
     scroll-margin-top: 120px;
 }
 
+#round-column{
+    width: 5%; text-transform: uppercase; font-weight: bold;
+}
+
+#start-column{
+    width: 18% !important;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#rally-column{
+    width: 35%; text-transform: uppercase; font-weight: bold;
+}
+
+#surface-column{
+    width: 5%; text-transform: uppercase; font-weight: bold;
+}
+
+#start-column{
+    width: 5%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .footer{
     position: fixed;
     z-index: 10000;
@@ -295,11 +320,122 @@ thead .first-row{
     font-family: Urbanist, Helvetica, sans-serif;
     font-weight: bold;
     background: linear-gradient(to top, rgba(27, 27, 27, 0.9), rgba(27, 27, 27, 0));
-    /*background: rgba(0, 27, 83, 0.72);*/
     backdrop-filter: blur(10px);
 }
 
 .footer p{
     padding-right: 20px;
     color: white;
+}
+
+@media (max-width: 960px){
+    .logo-image{
+        margin-left: 30px;
+    }
+
+    .nav-menu{
+        margin-right: 20px;
+    }
+    .nav-menu a{
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .hero-image{
+        background-attachment: scroll;
+        min-height: 70vh;
+        padding: 0;
+        margin: 0;
+        background-size: cover;
+        background-position: 70% center;
+    }
+
+    .hero-text{
+        font-size: 1.6em;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        min-height: auto;
+        margin: 0;
+        text-align: center;
+    }
+
+    .hero-section .hero-text h3{
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .hero-text p{
+        display: none;
+    }
+
+    .short-intro h2{
+        width: 100%;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .short-intro-text{
+        width: 100%;
+        margin-bottom: 50px;
+        text-align: justify;
+    }
+
+    .short-intro-img{
+        width: 100%;
+        float: left;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+
+    .manufacturers-heading{
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 50px;
+    }
+
+    .manufacturers-wrapper{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .manufacturers-wrapper h3{
+        width: 100%;
+        font-size: 1.3em;
+        margin-top: 10px;
+        margin-bottom: 60px;
+    }
+
+    .manufacturers-wrapper:hover{
+        transform: none;
+    }
+
+    .season-calendar-title{
+        font-size: 50px;
+        text-align: center;
+    }
+
+    #round-column{
+        width: 15%;
+    }
+
+    #start-column{
+        width: 10%;
+    }
+
+    #rally-column{
+        width: 30%;
+    }
+
+    .season-calendar tbody tr:hover{
+        color: inherit;
+        font-size: inherit;
+    }
+
+    .hide-mobile{
+        display: none;
+    }
 }
