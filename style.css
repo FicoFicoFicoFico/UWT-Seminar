@@ -352,9 +352,9 @@ thead .first-row{
 
     .hero-text{
         font-size: 1.6em;
-        top: 50%;
+        top: 75%;
         left: 50%;
-        transform: translate(-50%, 50%);
+        transform: translate(-50%, 0);
         min-height: auto;
         margin: 0;
         text-align: center;
@@ -437,5 +437,9 @@ thead .first-row{
 
     .hide-mobile{
         display: none;
+    }
+
+    .footer{
+        text-align: center;
     }
 }
